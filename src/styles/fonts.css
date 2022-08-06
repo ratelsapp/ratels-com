@@ -1,0 +1,14 @@
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
+}
+@font-face {
+  font-family: "GT Haptik Medium";
+  src: url('./fonts/GT-Haptik-Medium.woff2');
+}
+
+@font-face {
+  font-family: 'GT Haptik Regular';
+  src: url('./fonts/GT-Haptik-Regular.woff2');
+}

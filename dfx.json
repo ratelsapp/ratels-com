@@ -1,0 +1,32 @@
+{
+  "canisters": {
+    "interface": {
+      "frontend": {
+        "entrypoint": "src/index.html"
+      },
+      "source": ["dist/interface/"],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.3",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8002",
+      "type": "ephemeral"
+    },
+    "ic": {
+      "providers": ["https://gw.dfinity.network"],
+      "type": "persistent"
+    },
+    "alpha": {
+      "providers": ["https://mainnet.dfinity.network"],
+      "type": "persistent"
+    }
+  },
+  "version": 1
+}

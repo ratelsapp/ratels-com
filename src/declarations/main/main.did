@@ -1,0 +1,18 @@
+type SubscribeResult = 
+ record {
+   code: text;
+   status: bool;
+ };
+type EmailPage = 
+ record {
+   content: vec Email;
+   limit: nat;
+   offset: nat;
+   totalElements: nat;
+ };
+type Email = text;
+service : {
+  getEmailList: (nat, nat) -> (EmailPage) query;
+  getEmailSize: () -> (nat) query;
+  subscribe: (Email) -> (SubscribeResult);
+}
