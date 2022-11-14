@@ -271,7 +271,7 @@ const FeatureList = styled.ul`
   }
   & b {
     margin-top: 71px;
-    font-size: 32px;
+    font-size: 24px;
     font-family: Montserrat;
     font-weight: 400;
     color: #ffffff;
