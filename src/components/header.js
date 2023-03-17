@@ -179,7 +179,17 @@ const Header = (props) => {
     openInNewWindow(`https://wmdg5-jaaaa-aaaal-aav4q-cai.ic0.app/`, "ratel_dapp");
   };
 
+  const handleToStargate = () => {
+    openInNewWindow(`https://qescr-raaaa-aaaak-qbufa-cai.ic0.app/`, "stargate");
+  };
+
   const menus = [
+    {
+      name: "STARGATE",
+      id: "DAPP",
+      onClick: handleToStargate,
+      border: true,
+    },
     {
       name: "DAPP",
       id: "DAPP",
@@ -234,7 +244,13 @@ const Header = (props) => {
           </StyledNavLink>
           {menus.map((menu) => {
             return (
-              <Button key={menu.name} link={menu.link} primary={menu.primary} onClick={menu.onClick}>
+              <Button
+                key={menu.name}
+                link={menu.link}
+                primary={menu.primary}
+                border={menu.border}
+                onClick={menu.onClick}
+              >
                 {menu.name}
               </Button>
             );

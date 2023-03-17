@@ -5,10 +5,7 @@
   "keywords": [],
   "scripts": {
     "build": "webpack",
-    "prebuild": "npm run copy:types",
-    "start": "webpack serve --mode development --env development",
-    "prestart": "npm run copy:types",
-    "copy:types": "rsync -avr .dfx/$(echo ${DFX_NETWORK:-'**'})/canisters/** --exclude='assets/' --exclude='idl/' --exclude='*.wasm' --delete src/declarations"
+    "start": "webpack serve --mode development --env development"
   },
   "devDependencies": {
     "@babel/core": "^7.13.14",

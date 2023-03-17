@@ -11,21 +11,21 @@ const StyledButton = styled.button`
   justify-content: center;
   align-items: center;
   position: relative;
-  border: none;
   text-align: left;
   list-style: none;
   padding: 0 25px;
   height: 44px;
-  background: ${({ style1, primary }) =>
-    style1 ? "#162824" : primary ? "linear-gradient(45deg, #00c34d, #00a854)" : "#1F1F1F"};
+  background: ${({ style1, primary, border }) =>
+    style1 ? "#162824" : primary ? "linear-gradient(45deg, #00c34d, #00a854)" : border ? "none" : "#1F1F1F"};
+  border: ${({ border }) => (border ? "1px solid #00c34d" : "none")};
   border-radius: 22px;
   font-size: 16px;
-  color: #fff;
+  color: ${({ border }) => (border ? "#00c34d" : "#fff")};
   cursor: pointer;
 `;
 
 export default function Button({ children, ...props }) {
-  const { style1, link, primary } = props;
+  const { style1, link, primary, border } = props;
 
   const handleClick = () => {
     if (props.onClick) props.onClick();
@@ -33,7 +33,7 @@ export default function Button({ children, ...props }) {
   };
 
   return (
-    <StyledButton style1={style1} primary={primary} onClick={handleClick}>
+    <StyledButton style1={style1} primary={primary} border={border} onClick={handleClick}>
       {children}
     </StyledButton>
   );
