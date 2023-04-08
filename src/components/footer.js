@@ -46,6 +46,7 @@ const Footer = () => {
     tw: require("../images/tw.svg").default,
     tel: require("../images/tel.svg").default,
     ds: require("../images/ds.svg").default,
+    github: require("../images/github.svg").default,
   });
 
   return (
@@ -66,6 +67,7 @@ const Footer = () => {
                 tw: require("../images/tw.svg").default,
               });
             }}
+            target="_blank"
           >
             <img src={links.tw} />
           </a>
@@ -85,8 +87,29 @@ const Footer = () => {
                 ds: require("../images/ds.svg").default,
               });
             }}
+            target="_blank"
           >
             <img src={links.ds} />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/ratelsapp/stargate"
+            onMouseOver={() => {
+              setLinks({
+                ...links,
+                github: require("../images/github.svg").default,
+              });
+            }}
+            onMouseOut={() => {
+              setLinks({
+                ...links,
+                github: require("../images/github.svg").default,
+              });
+            }}
+            target="_blank"
+          >
+            <img src={links.github} />
           </a>
         </li>
       </ul>
